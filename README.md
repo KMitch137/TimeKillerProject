@@ -1,26 +1,22 @@
-# TimeKillerProject
-An application to help you end boredom and learn new information
+# TimeKiller 10,000
 
-//
-Time-Killer 10,000
-
-Description
+## Description
 
 The website will allow a user to input / choose a search criteria that will link top related wikipedia articles and YouTube video search results.
 
-User Story
+## User Story
 
 As a bored uneducated person,
 I want to kill time in a useful way,
 So that I can educate myself, end my boredom, and impress others with useless facts.
 
-API’s To Be Used
+## API's to be Used
 
 Wikipedia: https://www.mediawiki.org/wiki/API:Main_page
 YouTube: https://www.youtube.com/yt/dev/api-resources.html
 
 
-Task Breakdown
+## Task Breakdown
 
 Joseph: pseudo code / homepage HTML / CSS (framework)
 
