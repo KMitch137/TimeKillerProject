@@ -1,13 +1,25 @@
-.header {
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    margin-bottom: 50px;
+}
+
+.logo {
     text-align: center;
 }
 
-.user{
+.logo img {
+    max-height: 100%;
+}
+
+.user {
     display: block;
     border: solid 5px black;
 }
 
-.wiki{
+.wiki {
     float: left;
     display: flex;
     flex-flow: column;
@@ -24,3 +36,4 @@
     border: solid 5px black;
     margin: 10px 10px 10px 10px;
 }
+
