@@ -1,9 +1,9 @@
 var requestWiki = "https://www.mediawiki.org/wiki/API:Main_page"
-var topic = document.getElementById("input").value
+var topic = document.getElementById("input")
 var search = document.getElementById('searchBtn')
 
 function getYTApi() {
-    var requestYT = "https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=5&q="+topic+"&key=AIzaSyAURgWy8JwCuRdnhh8kw8tQADphnZm9v7o";
+    var requestYT = "https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=5&q="+topic.value+"&key=AIzaSyAURgWy8JwCuRdnhh8kw8tQADphnZm9v7o";
 
     fetch(requestYT)
         .then(function (response) {
@@ -24,11 +24,11 @@ function getWikiApi() {
         action: "query",
         list: "search",
         // tie user input to this search
-        srsearch: topic,
+        srsearch: topic.value,
         format: "json",
-        origin: location.origin
+        origin: '&origin=*'
     })
-    fetch(`${url}?${params}`)
+    fetch(url + "?" + params + "&origin=*")
     .then(function (response) { return response.json(); })
     .then(function (data) {
         console.log(data)
