@@ -1,0 +1,26 @@
+.header {
+    text-align: center;
+}
+
+.user{
+    display: block;
+    border: solid 5px black;
+}
+
+.wiki{
+    float: left;
+    display: flex;
+    flex-flow: column;
+    width: 40%;
+    border: solid 5px black;
+    margin: 10px 10px 10px 10px;
+}
+
+.youtube {
+    float: right;
+    display: flex;
+    flex-flow: column;
+    width: 40%;
+    border: solid 5px black;
+    margin: 10px 10px 10px 10px;
+}
