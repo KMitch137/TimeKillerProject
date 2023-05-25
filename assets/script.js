@@ -1,1 +1,1 @@
-var requestWiki = 'https://www.mediawiki.org/wiki/API:Main_page'
+var requestWiki = "https://www.mediawiki.org/wiki/API:Main_page"
