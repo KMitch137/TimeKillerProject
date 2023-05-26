@@ -2,9 +2,17 @@ var requestWiki = "https://www.mediawiki.org/wiki/API:Main_page"
 var topic = document.getElementById("input")
 var search = document.getElementById('searchBtn')
 var wikiParent = document.getElementById('wiki-parent')
+var body = document.querySelector('body');
+
+
+
 
 function getYTApi() {
     var requestYT = "https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=5&q="+topic.value+"&key=AIzaSyAURgWy8JwCuRdnhh8kw8tQADphnZm9v7o";
+    
+    if (topic.value === "phoenix suns") {
+        body.setAttribute("id", "go-suns")};
+
 
     fetch(requestYT)
         .then(function (response) {
@@ -47,3 +55,5 @@ function getWikiApi() {
 
 
 search.addEventListener('click', getYTApi);
+
+
