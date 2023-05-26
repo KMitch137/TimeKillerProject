@@ -2,6 +2,7 @@ var requestWiki = "https://www.mediawiki.org/wiki/API:Main_page"
 var topic = document.getElementById("input")
 var search = document.getElementById('searchBtn')
 var wikiParent = document.getElementById('wiki-parent')
+var body = document.querySelector('body');
 var YoutubeParent = document.getElementById('YT-parent')
 
 function getYTApi() {
@@ -12,6 +13,8 @@ function getYTApi() {
     while (YoutubeParent.hasChildNodes()){
         YoutubeParent.removeChild(YoutubeParent.firstChild);
     }
+    if (topic.value === "phoenix suns") {
+        body.setAttribute("id", "go-suns")};
     fetch(requestYT)
         .then(function (response) {
             return response.json();
