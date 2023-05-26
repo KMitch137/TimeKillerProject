@@ -2,8 +2,9 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 200px;
+    height: 250px;
     margin-bottom: 50px;
+    border: solid 5px black;
 }
 
 .logo {
@@ -13,27 +14,44 @@ header {
 .logo img {
     max-height: 100%;
 }
-
-.user {
-    display: block;
+#input {
+margin-bottom: 20px;
+width: 40%;
+}
+#sidebar {
+    float: left;
+    width: 25%;
     border: solid 5px black;
 }
 
-.wiki {
+.wiki-results, .youtube-results  {
     float: left;
     display: flex;
     flex-flow: column;
     width: 40%;
     border: solid 5px black;
     margin: 10px 10px 10px 10px;
+    padding: 10px;
 }
+@media (max-width: 600px) {
+    header {
+        height: 150px; /* Adjust the height as needed */
+    }
 
-.youtube {
-    float: right;
-    display: flex;
-    flex-flow: column;
-    width: 40%;
-    border: solid 5px black;
-    margin: 10px 10px 10px 10px;
+    .logo img {
+        max-height: 80px; /* Adjust the logo size for mobile */
+    }
+
+    #input {
+        width: 100%;
+    }
+
+    #sidebar {
+        width: 30%;
+    }
+
+    .wiki-results,
+    .youtube-results {
+        margin: 10px 0;
+    }
 }
-
