@@ -34,12 +34,12 @@ function getWikiApi() {
     .then(function (data) {
         console.log(data)
         for (var i = 0; i < 4; i++) {
-            var wikiChild = document.createElement('p');
+            //var wikiChild = document.createElement('p');
             var wikiA = document.createElement('a');
-            wikiChild.textContent = 'http://en.wikipedia.org/?curid=' + data.query.search[i].pageid;
+            wikiA.textContent = data.query.search[i].title
             wikiA.href = 'http://en.wikipedia.org/?curid=' + data.query.search[i].pageid;
-            wikiParent.append(wikiChild);
-            wikiChild.append(wikiA);
+            wikiParent.append(wikiA);
+            //wikiChild.append(wikiA);
         }
     });
 
