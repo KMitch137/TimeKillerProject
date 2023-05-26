@@ -19,6 +19,7 @@ header {
     max-height: 100%;
 }
 
+
 button {
     font-size: 10px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -41,11 +42,13 @@ button:hover {
 }
 
 #input {
-    margin-bottom: 20px;
-    width: 40%;
-    border: 1px solid #ffffff;
-    color: #fa3e0f;
+margin-bottom: 20px;
+width: 40%;
+border: 1px solid #ffffff; 
+color:#fa3e0f
 }
+
+
 
 #sidebar {
     float: left;
@@ -79,7 +82,7 @@ button:hover {
     text-decoration: underline;
 }
 
-.video-results a {
+.wiki-results, .youtube-results  {
     float: left;
     display: flex;
     flex-flow: column;
@@ -102,8 +105,7 @@ button:hover {
     }
 
     .logo img {
-        max-height: 100px;
-        /* Adjust the logo size for mobile */
+        max-height: 80px; /* Adjust the logo size for mobile */
     }
 
     #input {
