@@ -56,12 +56,14 @@ button:hover {
     color:#fa3e0f
 }
 
-
+#go-suns {
+    background-image: linear-gradient();
+}
 
 #sidebar {
     float: left;
     width: 25%;
-    /* border: solid 1px rgb(255, 255, 255); */
+    border: solid 1px rgb(255, 255, 255);
     color: #fa3e0f;
 }
 
