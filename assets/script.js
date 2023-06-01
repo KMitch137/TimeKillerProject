@@ -24,7 +24,7 @@ function getYTApi() {
             for (var i = 0; i < 4; i++){
                 var YoutubeA = document.createElement('a');
                 YoutubeA.textContent = data.items[i].snippet.title;
-                YoutubeA.href = 'https://www.youtube.com/' + data.items[i].id.videoid;
+                YoutubeA.href = 'https://www.youtube.com/' + data.items[i].id.videoId;
                 YoutubeParent.append(YoutubeA);
             }
 
