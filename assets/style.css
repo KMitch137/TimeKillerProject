@@ -1,10 +1,14 @@
+* {
+    background-color: rgb(0, 0, 0);
+}
+
 header {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 250px;
     margin-bottom: 50px;
-    border: solid 5px black;
+    border: solid 1px rgb(255, 255, 255);
 }
 
 .logo {
@@ -15,31 +19,83 @@ header {
     max-height: 100%;
 }
 
-#input {
-    margin-bottom: 20px;
-    width: 40%;
+
+button {
+    font-size: 10px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+    padding: 5px;
+    width: 60px;
+    text-align: center;
+    border: 3px solid #fa3e0f;
+    border-radius: 10px;
+    color: #fa3e0f;
+    font-style: italic;
+    background-color: rgb(0, 0, 0);
 }
+
+button:hover {
+    cursor: pointer;
+    box-shadow: 0rem 0.6rem 0.6rem 0.4rem #fa3e0f;
+    transform: translateY(-0.1rem);
+    transition: transform 150ms;
+}
+
+#input {
+margin-bottom: 20px;
+width: 40%;
+border: 1px solid #ffffff; 
+color:#fa3e0f
+}
+
+
 
 #sidebar {
     float: left;
     width: 25%;
-    border: solid 5px black;
+    border: solid 1px rgb(255, 255, 255);
+    color: #fa3e0f;
 }
 
-.wiki-results,
-.youtube-results {
+.categories a {
+    color: #ffffff;
+}
+
+.categories a:hover {
+    color: red;
+    text-decoration: underline;
+}
+
+.wiki-results a {
     float: left;
     display: flex;
     flex-flow: column;
-    width: 40%;
-    border: solid 5px black;
+    width: 60%;
+    border: solid 1px rgb(172, 16, 16);
     margin: 10px 10px 10px 10px;
     padding: 10px;
+    color: #ffffff;
 }
 
-#go-suns {
-    background-image: linear-gradient(270deg, rgb(46, 3, 42), rgb(248, 95, 6));
-    color: white;
+.wiki-results a:hover {
+    color: red;
+    text-decoration: underline;
+}
+
+.wiki-results, .youtube-results  {
+    float: left;
+    display: flex;
+    flex-flow: column;
+    width: 60%;
+    border: solid 1px rgb(255, 255, 255);
+    margin: 10px 10px 10px 10px;
+    padding: 10px;
+    color: #ffffff;
+}
+
+.video-results a:hover {
+    color: red;
+    text-decoration: underline;
 }
 
 @media (max-width: 600px) {
@@ -49,8 +105,7 @@ header {
     }
 
     .logo img {
-        max-height: 80px;
-        /* Adjust the logo size for mobile */
+        max-height: 80px; /* Adjust the logo size for mobile */
     }
 
     #input {
