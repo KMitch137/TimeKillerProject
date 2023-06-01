@@ -23,13 +23,17 @@ header {
     max-height: 100%;
 }
 
+h3 {
+    color:#fa3e0f;
+}
 
 button {
-    font-size: 10px;
+    font-size: 16px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-weight: bold;
     padding: 5px;
-    width: 60px;
+    width: 90px;
+    height: 40px;
     text-align: center;
     border: 3px solid #fa3e0f;
     border-radius: 10px;
@@ -46,10 +50,10 @@ button:hover {
 }
 
 #input {
-margin-bottom: 20px;
-width: 40%;
-border: 1px solid #ffffff; 
-color:#fa3e0f
+    margin-bottom: 20px;
+    width: 40%;
+    border: 1px solid #ffffff; 
+    color:#fa3e0f
 }
 
 
@@ -63,6 +67,7 @@ color:#fa3e0f
 
 .categories a {
     color: #ffffff;
+    font-size: 20px;
 }
 
 .categories a:hover {
@@ -79,6 +84,7 @@ color:#fa3e0f
     margin: 10px 10px 10px 10px;
     padding: 10px;
     color: #ffffff;
+    font-size: 20px;
 }
 
 .wiki-results a:hover, .youtube-parent a:hover {
