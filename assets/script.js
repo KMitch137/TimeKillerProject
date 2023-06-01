@@ -5,6 +5,7 @@ var wikiParent = document.getElementById('wiki-parent')
 var body = document.querySelector('body');
 var YoutubeParent = document.getElementById('YT-parent')
 
+
 function getYTApi() {
     var requestYT = "https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=5&q="+topic.value+"&key=AIzaSyAURgWy8JwCuRdnhh8kw8tQADphnZm9v7o";
     while (wikiParent.hasChildNodes()){
@@ -24,7 +25,7 @@ function getYTApi() {
             for (var i = 0; i < 4; i++){
                 var YoutubeA = document.createElement('a');
                 YoutubeA.textContent = data.items[i].snippet.title;
-                YoutubeA.href = 'https://www.youtube.com/' + data.items[i].id.videoId;
+                YoutubeA.href = 'https://www.youtube.com/shorts/' + data.items[i].id.videoId;
                 YoutubeParent.append(YoutubeA);
             }
 
