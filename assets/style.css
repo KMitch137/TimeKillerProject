@@ -2,13 +2,17 @@
     background-color: rgb(0, 0, 0);
 }
 
+main {
+    display: flex;
+}
+
 header {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 250px;
     margin-bottom: 50px;
-    border: solid 1px rgb(255, 255, 255);
+    /* border: solid 1px rgb(255, 255, 255); */
 }
 
 .logo {
@@ -53,7 +57,7 @@ color:#fa3e0f
 #sidebar {
     float: left;
     width: 25%;
-    border: solid 1px rgb(255, 255, 255);
+    /* border: solid 1px rgb(255, 255, 255); */
     color: #fa3e0f;
 }
 
@@ -66,7 +70,7 @@ color:#fa3e0f
     text-decoration: underline;
 }
 
-.wiki-results a {
+.wiki-results a, .youtube-parent a {
     float: left;
     display: flex;
     flex-flow: column;
@@ -82,12 +86,12 @@ color:#fa3e0f
     text-decoration: underline;
 }
 
-.wiki-results, .youtube-results  {
+.wiki-results, .youtube-parent  {
     float: left;
     display: flex;
     flex-flow: column;
     width: 60%;
-    border: solid 1px rgb(255, 255, 255);
+    /* border: solid 1px rgb(255, 255, 255); */
     margin: 10px 10px 10px 10px;
     padding: 10px;
     color: #ffffff;
