@@ -81,7 +81,7 @@ color:#fa3e0f
     color: #ffffff;
 }
 
-.wiki-results a:hover {
+.wiki-results a:hover, .youtube-parent a:hover {
     color: red;
     text-decoration: underline;
 }
@@ -124,4 +124,8 @@ color:#fa3e0f
     .youtube-results {
         margin: 10px 0;
     }
+}
+
+h2 {
+    color: white
 }
