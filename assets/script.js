@@ -366,6 +366,28 @@ function getWikiApi() {
         srlimit: "5",
         origin: '&origin=*'
     });
+
+        // Changes 
+        var topicLower = topic.value.toLowerCase().trim()
+
+        if (topicLower === "phoenix suns") {
+            wikiParent.setAttribute("id", "go-suns");
+            YoutubeParent.setAttribute("id", "go-suns");
+        };
+        if (topicLower === "chicago bulls") {
+            wikiParent.setAttribute("id", "go-bulls");
+            YoutubeParent.setAttribute("id", "go-bulls");
+        };
+        if (topicLower === 'batgirl' || topicLower === 'batman' || topicLower === 'batwoman') {
+            wikiParent.setAttribute("id", "bat");
+            YoutubeParent.setAttribute("id", "bat");
+        };
+        if (topicLower === 'teenage Mutant ninja turtles' || topicLower === 'incredible hulk' || topicLower === 'green lantern'  ) {
+            wikiParent.setAttribute("id", "go-green");
+            YoutubeParent.setAttribute("id", "go-green");
+        };
+        
+
     wikiHead.textContent = "Here are some Wikipedia articles about " + topic.value + ":";
     wikiParent.append(wikiHead);
     fetch(url + "?" + params + "&origin=*")
