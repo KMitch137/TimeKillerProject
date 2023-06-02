@@ -32,4 +32,4 @@ To view the project in action visit:  https://kmitch137.github.io/TimeKillerProj
 
 
 
-![image](https://github.com/KMitch137/TimeKillerProject/assets/124840930/8d9d4657-4037-4dec-a19d-7f54e713a9e2)
+![image](https://github.com/KMitch137/TimeKillerProject/assets/124840930/0f8b7f81-c5de-4e00-8aba-97a629667af3)
