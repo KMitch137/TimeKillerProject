@@ -2,7 +2,6 @@ var requestWiki = "https://www.mediawiki.org/wiki/API:Main_page";
 var topic = document.getElementById("input");
 var search = document.getElementById('searchBtn');
 var wikiParent = document.getElementById('wiki-parent');
-var body = document.querySelector('body');
 var YoutubeParent = document.getElementById('YT-parent');
 var Superbtn = document.getElementById('SuperHero');
 var NBAbtn = document.getElementById('NBAteam');
@@ -329,7 +328,9 @@ function getYTApi() {
         YoutubeParent.removeChild(YoutubeParent.firstChild);
     }
     if (topic.value === "phoenix suns") {
-        body.setAttribute("id", "go-suns")};
+        wikiParent.setAttribute("id", "go-suns");
+        YoutubeParent.setAttribute("id", "go-suns");
+    };
     fetch(requestYT)
         .then(function (response) {
             return response.json();
