@@ -316,8 +316,9 @@ const btnArray = [
         button: AZbtn,
         arr: AZPlants,
     }
-]
-console.log(btnArray[0].arr)
+];
+
+console.log(btnArray[0].arr);
 
 function getYTApi() {
     var requestYT = "https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=5&q="+topic.value+"&key=AIzaSyAURgWy8JwCuRdnhh8kw8tQADphnZm9v7o";
@@ -334,7 +335,7 @@ function getYTApi() {
             return response.json();
         })
         .then(function (data) {
-            console.log(data)
+            console.log(data);
             for (var i = 0; i < 4; i++){
                 var YoutubeA = document.createElement('a');
                 YoutubeA.textContent = data.items[i].snippet.title;
@@ -344,7 +345,7 @@ function getYTApi() {
 
         });
     getWikiApi();
-}
+};
 
 function getWikiApi() {
     var url = "https://en.wikipedia.org/w/api.php";
@@ -361,16 +362,15 @@ function getWikiApi() {
     fetch(url + "?" + params + "&origin=*")
     .then(function (response) { return response.json(); })
     .then(function (data) {
-        console.log(data)
+        console.log(data);
         for (var i = 0; i < 4; i++) {
             var wikiA = document.createElement('a');
             wikiA.textContent = data.query.search[i].title;
             wikiA.href = 'http://en.wikipedia.org/?curid=' + data.query.search[i].pageid;
             wikiParent.append(wikiA);
-        }
+        };
     });
-
-}
+};
 
 function randomArr(cataArr) {
     var randomIndex = Math.floor(Math.random()*cataArr.length);
@@ -382,10 +382,10 @@ function randomArr(cataArr) {
 for (var i = 0; i < btnArray.length; i++){
     const cataArr = btnArray[i].arr
     btnArray[i].button.addEventListener('click',function(){randomArr(cataArr)})
-}
-
-//function needs to pull a math.random value from each of our arrays and plug that value into the search bar
+};
 
 search.addEventListener('click', getYTApi);
 
 
+//add styling for SUNS
+//add titles to each section that concat h2.value(Here are wiki articles about _____) + topic.value
