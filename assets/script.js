@@ -323,10 +323,10 @@ function getYTApi() {
     var requestYT = "https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=5&q="+topic.value+"&key=AIzaSyAURgWy8JwCuRdnhh8kw8tQADphnZm9v7o";
     while (wikiParent.hasChildNodes()){
         wikiParent.removeChild(wikiParent.firstChild);
-    }
+    };
     while (YoutubeParent.hasChildNodes()){
         YoutubeParent.removeChild(YoutubeParent.firstChild);
-    }
+    };
     if (topic.value === "phoenix suns") {
         wikiParent.setAttribute("id", "go-suns");
         YoutubeParent.setAttribute("id", "go-suns");
@@ -342,8 +342,7 @@ function getYTApi() {
                 YoutubeA.textContent = data.items[i].snippet.title;
                 YoutubeA.href = 'https://www.youtube.com/shorts/' + data.items[i].id.videoId;
                 YoutubeParent.append(YoutubeA);
-            }
-
+            };
         });
     getWikiApi();
 };
@@ -361,16 +360,18 @@ function getWikiApi() {
         origin: '&origin=*'
     })
     fetch(url + "?" + params + "&origin=*")
-    .then(function (response) { return response.json(); })
-    .then(function (data) {
-        console.log(data);
-        for (var i = 0; i < 4; i++) {
-            var wikiA = document.createElement('a');
-            wikiA.textContent = data.query.search[i].title;
-            wikiA.href = 'http://en.wikipedia.org/?curid=' + data.query.search[i].pageid;
-            wikiParent.append(wikiA);
-        };
-    });
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (data) {
+            console.log(data);
+            for (var i = 0; i < 4; i++) {
+                var wikiA = document.createElement('a');
+                wikiA.textContent = data.query.search[i].title;
+                wikiA.href = 'http://en.wikipedia.org/?curid=' + data.query.search[i].pageid;
+                wikiParent.append(wikiA);
+            };
+        });
 };
 
 function randomArr(cataArr) {
