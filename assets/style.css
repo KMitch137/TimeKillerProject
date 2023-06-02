@@ -60,9 +60,22 @@ button:hover {
     background-image: linear-gradient(270deg, rgb(148, 17, 120), rgb(209, 115, 28) );
 }
 
+#go-bulls {
+    background-image: linear-gradient(270deg, rgb(0, 0, 0), rgb(185, 11, 11) );
+}
+
+#bat {
+    background-image: linear-gradient(270deg, rgb(0, 0, 0), rgb(238, 222, 4) );
+}
+
+#go-green {
+    background-image: linear-gradient(270deg, rgb(3, 46, 3), rgb(252, 252, 252) );
+}
+
+
 #sidebar {
     float: left;
-    width: 25%;
+    width: 15%;
     border: solid 1px rgb(255, 255, 255);
     color: #fa3e0f;
 }
@@ -81,7 +94,7 @@ button:hover {
     float: left;
     display: flex;
     flex-flow: column;
-    width: 60%;
+    width: fit-content;
     border: solid 1px rgb(172, 16, 16);
     margin: 10px 10px 10px 10px;
     padding: 10px;
@@ -98,12 +111,16 @@ button:hover {
     float: left;
     display: flex;
     flex-flow: column;
-    width: 60%;
+    width: 100%;
     /* border: solid 1px rgb(255, 255, 255); */
     margin: 10px 10px 10px 10px;
     padding: 10px;
     color: #ffffff;
 }
+/* 
+.content-container {
+    margin: 0 auto;
+} */
 
 .video-results a:hover {
     color: red;

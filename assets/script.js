@@ -322,16 +322,33 @@ console.log(btnArray[0].arr);
 function getYTApi() {
     var requestYT = "https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=5&q="+topic.value+"&key=AIzaSyAURgWy8JwCuRdnhh8kw8tQADphnZm9v7o";
     var YoutubeHead = document.createElement('h3');
+    var topicLower = topic.value.toLowerCase().trim();
     while (wikiParent.hasChildNodes()){
         wikiParent.removeChild(wikiParent.firstChild);
     };
     while (YoutubeParent.hasChildNodes()){
         YoutubeParent.removeChild(YoutubeParent.firstChild);
     };
-    if (topic.value === "phoenix suns") {
+    if (topicLower === "phoenix suns") {
         wikiParent.setAttribute("id", "go-suns");
         YoutubeParent.setAttribute("id", "go-suns");
     };
+    if (topicLower === "phoenix suns") {
+            wikiParent.setAttribute("id", "go-suns");
+            YoutubeParent.setAttribute("id", "go-suns");
+        };
+    if (topicLower === "chicago bulls") {
+            wikiParent.setAttribute("id", "go-bulls");
+            YoutubeParent.setAttribute("id", "go-bulls");
+        };
+    if (topicLower === 'batgirl' || topicLower === 'batman' || topicLower === 'batwoman') {
+            wikiParent.setAttribute("id", "bat");
+            YoutubeParent.setAttribute("id", "bat");
+        };
+    if (topicLower === 'teenage Mutant ninja turtles' || topicLower === 'incredible hulk' || topicLower === 'green lantern'  ) {
+            wikiParent.setAttribute("id", "go-green");
+            YoutubeParent.setAttribute("id", "go-green");
+        };
     YoutubeHead.textContent = "Here are some Youtube videos related to " + topic.value+':';
     YoutubeParent.append(YoutubeHead);
     fetch(requestYT)
@@ -392,7 +409,3 @@ for (var i = 0; i < btnArray.length; i++){
 };
 
 search.addEventListener('click', getYTApi);
-
-
-//add styling for SUNS
-//add titles to each section that concat h2.value(Here are wiki articles about _____) + topic.value
