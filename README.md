@@ -25,3 +25,9 @@ Keir: pseudo code / README / code review / JS Wikipedia API
 Kevin: pseudo code / repo creation / code review / JS Youtube API
 
 Lavina: pseudo code / homepage HTML / CSS (framework)
+
+
+
+
+
+![image](https://github.com/KMitch137/TimeKillerProject/assets/124840930/8d9d4657-4037-4dec-a19d-7f54e713a9e2)
