@@ -327,10 +327,27 @@ function getYTApi() {
     while (YoutubeParent.hasChildNodes()){
         YoutubeParent.removeChild(YoutubeParent.firstChild);
     };
-    if (topic.value === "phoenix suns") {
+
+    // Changes 
+    var topicLower = topic.value.toLowerCase().trim()
+
+    if (topicLower === "phoenix suns") {
         wikiParent.setAttribute("id", "go-suns");
         YoutubeParent.setAttribute("id", "go-suns");
     };
+    if (topicLower === "chicago bulls") {
+        wikiParent.setAttribute("id", "go-bulls");
+        YoutubeParent.setAttribute("id", "go-bulls");
+    };
+    if (topicLower === 'batgirl' || topicLower === 'batman' || topicLower === 'batwoman') {
+        wikiParent.setAttribute("id", "bat");
+        YoutubeParent.setAttribute("id", "bat");
+    };
+    if (topicLower === 'teenage Mutant ninja turtles' || topicLower === 'incredible hulk' || topicLower === 'green lantern'  ) {
+        wikiParent.setAttribute("id", "go-green");
+        YoutubeParent.setAttribute("id", "go-green");
+    };
+    
     fetch(requestYT)
         .then(function (response) {
             return response.json();
@@ -389,5 +406,4 @@ for (var i = 0; i < btnArray.length; i++){
 search.addEventListener('click', getYTApi);
 
 
-//add styling for SUNS
 //add titles to each section that concat h2.value(Here are wiki articles about _____) + topic.value
