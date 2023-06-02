@@ -27,6 +27,8 @@ Kevin: pseudo code / repo creation / code review / JS Youtube API
 Lavina: pseudo code / homepage HTML / CSS (framework)
 
 
+To view the project in action visit:  https://kmitch137.github.io/TimeKillerProject/
+
 
 
 
