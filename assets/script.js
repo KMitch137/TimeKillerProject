@@ -8,6 +8,7 @@ var NBAbtn = document.getElementById('NBAteam');
 var CodingBtn = document.getElementById('Coding-topic');
 var CountryBtn = document.getElementById('countries-world');
 var AZbtn = document.getElementById('AZ-plants');
+// these arrays are preset topics that a user can randomly choose from by using the catagories sidebar
 const superhero = ['Ant-Man', 'Aquaman', 'Asterix', 'The Atom',' The Avengers', 'Batgirl', 'Batman', 'Batwoman', 'Black Canary', 'Black Panther', 'Captain America', 'Captain Marvel', 'Catwoman', 'Conan the Barbarian', 'Daredevil', 'The Defenders', 'Doc Savage', 'Doctor Strange', 'Elektra', 'Fantastic Four', 'Ghost Rider', 'Green Arrow', 'Green Lantern', 'Guardians of the Galaxy', 'Hawkeye', 'Hellboy', 'Incredible Hulk', 'Iron Fist', 'Iron Man', 'Marvelman', 'Robin', 'The Rocketeer', 'The Shadow', 'Spider-Man', 'Sub-Mariner',  'Supergirl', 'Superman', 'Teenage Mutant Ninja Turtles', 'Thor', 'The Wasp', 'Watchmen', 'Wolverine', 'Wonder Woman', 'X-Men', 'Zatanna', 'Zatara'];
 const NBAteams = [
     'Atlanta Hawks', 
@@ -293,7 +294,7 @@ const AZPlants = [
     "Texas prickly-pear",
     "Apricot mallow"
 ];
-
+//the button array is used to attach event listeners to each catagory on the sidebar
 const btnArray = [
     {
         button: Superbtn,
@@ -318,17 +319,22 @@ const btnArray = [
 ];
 
 console.log(btnArray[0].arr);
-
+// this is the main search function of the website 
 function getYTApi() {
     var requestYT = "https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=5&q="+topic.value+"&key=AIzaSyAURgWy8JwCuRdnhh8kw8tQADphnZm9v7o";
     var YoutubeHead = document.createElement('h3');
     var topicLower = topic.value.toLowerCase().trim();
+    //resets the style of the results after each search before checking for an "easter egg"
+    wikiParent.setAttribute("id", "wiki-parent");
+    YoutubeParent.setAttribute("id", "YT-parent");
+    //removes each link from the previous search before showing new results
     while (wikiParent.hasChildNodes()){
         wikiParent.removeChild(wikiParent.firstChild);
     };
     while (YoutubeParent.hasChildNodes()){
         YoutubeParent.removeChild(YoutubeParent.firstChild);
     };
+    //easter egg styles:
     if (topicLower === "phoenix suns") {
         wikiParent.setAttribute("id", "go-suns");
         YoutubeParent.setAttribute("id", "go-suns");
@@ -349,7 +355,8 @@ function getYTApi() {
             wikiParent.setAttribute("id", "go-green");
             YoutubeParent.setAttribute("id", "go-green");
         };
-    YoutubeHead.textContent = "Here are some Youtube videos related to " + topic.value+':';
+    //sets the title of the youtube results after each search
+    YoutubeHead.textContent = "Here are some Youtube videos related to " + topic.value + ':';
     YoutubeParent.append(YoutubeHead);
     fetch(requestYT)
         .then(function (response) {
@@ -357,6 +364,7 @@ function getYTApi() {
         })
         .then(function (data) {
             console.log(data);
+            //adds a clickable link to the retieved data
             for (var i = 0; i < 4; i++){
                 var YoutubeA = document.createElement('a');
                 YoutubeA.textContent = data.items[i].snippet.title;
@@ -366,7 +374,7 @@ function getYTApi() {
         });
     getWikiApi();
 };
-
+//runs at the same time as the Youtube fetch function to pull wiki articles related to topic.value
 function getWikiApi() {
     var url = "https://en.wikipedia.org/w/api.php";
     var wikiHead = document.createElement('h3')
@@ -379,6 +387,7 @@ function getWikiApi() {
         srlimit: "5",
         origin: '&origin=*'
     });
+    //setting wiki results title
     wikiHead.textContent = "Here are some Wikipedia articles about " + topic.value + ":";
     wikiParent.append(wikiHead);
     fetch(url + "?" + params + "&origin=*")
@@ -395,17 +404,17 @@ function getWikiApi() {
             };
         });
 };
-
+//when a user clicks a catagory on the sidebar this will grab a value from the selected array and display the related search results - just in case the user is too lazy to come up with something interesting on the spot
 function randomArr(cataArr) {
     var randomIndex = Math.floor(Math.random()*cataArr.length);
     var subject = cataArr[randomIndex];
     topic.value = subject;
     getYTApi();
 };
-
+//adds an event listener to each catagory in the sidbar - can be extended by adding to the BtnArray
 for (var i = 0; i < btnArray.length; i++){
     const cataArr = btnArray[i].arr;
     btnArray[i].button.addEventListener('click',function(){randomArr(cataArr)})
 };
-
+//runs main function on click
 search.addEventListener('click', getYTApi);

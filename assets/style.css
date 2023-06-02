@@ -25,6 +25,7 @@ header {
 
 h3 {
     color:#fa3e0f;
+    width: fit-content;
 }
 
 button {
@@ -117,6 +118,7 @@ button:hover {
     padding: 10px;
     color: #ffffff;
 }
+
 /* 
 .content-container {
     margin: 0 auto;
