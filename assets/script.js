@@ -321,6 +321,7 @@ console.log(btnArray[0].arr);
 
 function getYTApi() {
     var requestYT = "https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=5&q="+topic.value+"&key=AIzaSyAURgWy8JwCuRdnhh8kw8tQADphnZm9v7o";
+    var YoutubeHead = document.createElement('h3');
     while (wikiParent.hasChildNodes()){
         wikiParent.removeChild(wikiParent.firstChild);
     };
@@ -331,6 +332,8 @@ function getYTApi() {
         wikiParent.setAttribute("id", "go-suns");
         YoutubeParent.setAttribute("id", "go-suns");
     };
+    YoutubeHead.textContent = "Here are some Youtube videos related to " + topic.value+':';
+    YoutubeParent.append(YoutubeHead);
     fetch(requestYT)
         .then(function (response) {
             return response.json();
@@ -349,7 +352,7 @@ function getYTApi() {
 
 function getWikiApi() {
     var url = "https://en.wikipedia.org/w/api.php";
-
+    var wikiHead = document.createElement('h3')
     var params = new URLSearchParams({
         action: "query",
         list: "search",
@@ -358,7 +361,9 @@ function getWikiApi() {
         format: "json",
         srlimit: "5",
         origin: '&origin=*'
-    })
+    });
+    wikiHead.textContent = "Here are some Wikipedia articles about " + topic.value + ":";
+    wikiParent.append(wikiHead);
     fetch(url + "?" + params + "&origin=*")
         .then(function (response) {
             return response.json();
@@ -377,12 +382,12 @@ function getWikiApi() {
 function randomArr(cataArr) {
     var randomIndex = Math.floor(Math.random()*cataArr.length);
     var subject = cataArr[randomIndex];
-    topic.value = subject
+    topic.value = subject;
     getYTApi();
 };
 
 for (var i = 0; i < btnArray.length; i++){
-    const cataArr = btnArray[i].arr
+    const cataArr = btnArray[i].arr;
     btnArray[i].button.addEventListener('click',function(){randomArr(cataArr)})
 };
 
