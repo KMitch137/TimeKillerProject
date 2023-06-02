@@ -409,6 +409,3 @@ for (var i = 0; i < btnArray.length; i++){
 };
 
 search.addEventListener('click', getYTApi);
-
-
-//add titles to each section that concat h2.value(Here are wiki articles about _____) + topic.value
