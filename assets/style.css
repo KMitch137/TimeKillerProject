@@ -81,6 +81,10 @@ button:hover {
     color: #fa3e0f;
 }
 
+.sidebar-h3 {
+    margin: 8px 8px 8px 8px;
+}
+
 .categories a {
     color: #ffffff;
     font-size: 20px;
