@@ -95,6 +95,15 @@ button:hover {
     text-decoration: underline;
 }
 
+.wiki-results h3, .youtube-parent h3 {
+    margin: 10px 10px 10px 10px;
+    float: left;
+    padding: 10px; 
+    width: fit-content;
+    display: flex;
+    font-size: 22px;
+} 
+
 .wiki-results a, .youtube-parent a {
     float: left;
     display: flex;
