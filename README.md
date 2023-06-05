@@ -6,9 +6,11 @@ The website will allow a user to input / choose a search criteria that will link
 
 ## User Story
 
-As a bored uneducated person,
-I want to kill time in a useful way,
-So that I can educate myself, end my boredom, and impress others with useless facts.
+TimeKiller 10,000 was created to allow users the option to search a subject either on their own, or use already provided search criteria to learn something new, on the fly, and to kill time. The populated results are the top five search results using Wikipedia and YouTube server-side APIs.
+
+TimeKiller 10,000 offers a quick way to learn something quickly, offering video for those who learn visually, as well as Wikipedia search results for those who love to read the online encyclopedia filled with facts and other references.​
+
+The idea was to end boredom, educate, and offering users a way to impress others with useful, and sometimes useless facts.
 
 ## API's to be Used
 
@@ -16,15 +18,28 @@ Wikipedia: https://www.mediawiki.org/wiki/API:Main_page
 YouTube: https://www.youtube.com/yt/dev/api-resources.html
 
 
+## Technologies Used
+
+    - HTML
+    - CSS
+    - JavaScript
+    - Server-Side APIs​
+
 ## Task Breakdown
 
-Joseph: pseudo code / homepage HTML / CSS (framework)
+HTML/CSS/Pseudo Code/Presentation: Lavina Castillo, Joseph Frechette​
 
-Keir: pseudo code / README / code review / JS Wikipedia API
+JavaScript/APIs/HTML/CSS/Pseudo Code:  Kevin Mitchell, Keir Bradshaw
 
-Kevin: pseudo code / repo creation / code review / JS Youtube API
 
-Lavina: pseudo code / homepage HTML / CSS (framework)
+## Deployed Link:​
+​
+    https://kmitch137.github.io/TimeKillerProject/ ​
+
+## GitHub Repo Link:​
+ ​
+    https://github.com/KMitch137/TimeKillerProject 
+
 
 
 To view the project in action visit:  https://kmitch137.github.io/TimeKillerProject/
