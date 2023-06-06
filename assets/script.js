@@ -330,18 +330,14 @@ function getYTApi() {
     //removes each link from the previous search before showing new results
     while (wikiParent.hasChildNodes()){
         wikiParent.removeChild(wikiParent.firstChild);
-    };
+        };
     while (YoutubeParent.hasChildNodes()){
         YoutubeParent.removeChild(YoutubeParent.firstChild);
-    };
+        };
     //easter egg styles:
     if (topicLower === "phoenix suns") {
         wikiParent.setAttribute("id", "go-suns");
         YoutubeParent.setAttribute("id", "go-suns");
-    };
-    if (topicLower === "phoenix suns") {
-            wikiParent.setAttribute("id", "go-suns");
-            YoutubeParent.setAttribute("id", "go-suns");
         };
     if (topicLower === "chicago bulls") {
             wikiParent.setAttribute("id", "go-bulls");
